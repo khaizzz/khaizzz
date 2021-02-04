@@ -1,68 +1,23 @@
-<!DOCTYPE html>
 <html>
+<head><title>Reflections on #Davos20: The forces, opportunities and challenges that lie ahead as the world’s center of gravity shifts to Asia in the 2020s</title></head>
 <body>
-<time class=”entry-date published” datetime=”2020–02–07T10:25:32+00:00">February 7, 2020</time>
-<h1>Hello World</h1>
-<p>A few weeks ago, I was joined by leaders of business and government from 91 countries at the Annual Meeting of the World Economic Forum in Davos, Switzerland, where I attended as a delegate of McKinsey & Company.
+	<div class="entry-meta"><a class="entry-date published">February 7, 2020</a></div>
 
-It was both an inspiring and humbling experience. The range and depth of conversation on topics like sustainability, regional growth, technology, was invaluable. I was also thrilled by the sense of urgency in Davos—the need to move from talk to action was palpable.
+<p>A million dollar (literally) question.  
 
-I wanted to outline a few of the key topics I heard, and end with a view on what this means for leaders in the 21st century.
+<p>The most praised attribute of the cloud is the elasticity. It's not just capacity elasticity but also configuration elasticity. Do you need a new network? No problem, one click or one API call and here comes your new network. Same for storage or VPN endpoints or almost anything. With your own datacenter, you have your own elasticity, it's elastic only to the degree you thought about in advance, sometimes years in advance. You need just 70 servers today, and that would fit in 2 racks, so you order 4 in the cage at the facility, using a part of the 3rd rack for your networking gear and considering the rest as the room to grow. Then your company suddenly grows faster than you anticipated (say, 2x) and oops. You need to lease *another* space in this facility (and you are lucky if they have necessary space), build a completely new infrastructure there and then seamlessly migrate your workloads. Which means you are paying twice for the extended period, plus mistakes, outages, lots of all-nighters and the whole nine yards.
 
-No alt text provided for this image
-What’s changed since Davos 2019?
+<p>CTO/BTO servers have lead times from 3 weeks to a couple of months, so if you have to have spare computing capacity (room to grow, elasticity) you have to keep this capacity in your own storage room. Storage units typically have even longer lead times. Network gear also requires purchasing of expensive equipment with extended lead times and then complex cabling.
 
-Last year will be remembered as the year defined by populism, activism, trade tensions, a climate change crisis, and very few concrete resolutions, meaning a year of much uncertainty and poor visibility for business leaders. Since Davos 2019, we’ve seen the escalation of the climate crisis, economies constrained by trade disputes and geopolitical uncertainty, and a climate of populism and protectionism prevailing. The coming year is widely expected to bring more of the same, with global stimulus packages coming to an end, inflation rising, and several central banks venturing into negative interest rate territory.
+<p>With the cloud, this problem just doesn't exist. Well, not entirely, even mighty Amazon regularly having capacity limitations, but nothing comparable to your own datacenter. If you need more infrastructure, you just go and order it. Even if they have capacity shortages, they will resolve them much faster than you can do for yourselves. 
 
-Here are themes I discussed with my peers in Davos; the ones I found particularly relevant for my network of business leaders:
+<p>So why people still build and maintain datacenters? Because sometimes they want to have the control over the physical infrastructure - servers, switches, cables, routers, interconnects and so on. It could be just paranoia, or it could be security or privacy requirement. 
+<p>Sometimes they understand that configuration elasticity does not mean configuration flexibility. Amazon (or Azure for that matter) offers only a limited number of instance (VM) types. And if you need 22GB RAM instance with 4 VCPUs you have to use either 16GB with 4 VCPU or 32GB with 8 VCPU. In the former case your application will suffer, in the latter, you basically pay the double price. When I rack my own baremetal servers and then install my own VMware ESXi on them, I can slice and dice resources as I want. 
 
-Environmental sustainability – the time for action is now
+<p>Also, there is a notion of cost, of course. You pay a lot of money on top of the cost of your own infrastructure to get that cloud elasticity. And these expenses are only fully worth it if your workloads are elastic both ways - they expand as well as collapse. If you only grow and never collapse then you should think about building your own infrastructure for the constant part of your workload and implement cloud for the expansion, building more private infrastructure slowly. This is the hybrid cloud, and when designed properly it allows you to have cloud elasticity at _almost_ private infrastructure cost. 
 
-Of course, climate change is one of the hottest topics on people’s minds these days (and one that should concern everyone, frankly). One only needs to look at the attendance of the Global Climate Strike to know activism on sustainability is getting stronger and gaining influence. The climate strike drew over 6 million protesters globally, making it the biggest demonstration against climate change in history. With many government policies around sustainability stalling, many are turning to power of the private sector—and demanding action over talk from them.
+<p>Sometimes you just have so much money that you don't care, and I've seen companies paying north of $500K per month for the cloud infrastructure that would have cost them $80K fully loaded (including tech salary and lease payments for the equipment).
 
-My colleagues Dickon Pinner and Jonathan Woetzel presented on this topic in Davos, sharing our recent climate risk and response report. The report looks at the substantial physical ways climate change is impacting local regions across the world, and the five socioeconomic systems where climate change will have direct effects: livability and workability, food systems, physical assets, infrastructure services, and natural capital. Countries and regions with lower per capita GDP levels are generally more at risk, and poorer regions often have climates that are closer to physical thresholds. They rely more on outdoor work and natural capital and have fewer financial means to adapt quickly. Climate change could also benefit some countries, which we expand on more in our research.
-
-We also see a future where financial markets bring forward risk recognition in affected regions, with consequences for capital allocation and insurance. This would be a result of greater understanding of climate risk making long-duration borrowing unavailable, impact insurance cost and availability, and reduction in terminal values.
-
-In the face of these challenges, policy makers and business leaders must act now. Addressing physical climate risk will require more systematic risk management, accelerating adaptation, and decarbonization, for instance. Corporations around the world are acting – including McKinsey & Company – and I left Davos feeling truly moved and inspired by the proactive measures taken by many.
-
-Macroeconomic and geopolitical outlook – increased uncertainty
-
-This topic has been covered by many, with significant analysis and depth, so I won’t dive deep here. What’s worth noting is that ongoing uncertainty is leading to stagnating GDP growth. In the US, GDP growth is decelerating: most reports forecast growth at 1.8-2 percent this year, and long-term forecasts predict a further slip to 1.7 percent in 2021-22. In Europe, GDP growth is expected to fall to 1 percent in 2020 and recover modestly to an average of 1.3 percent in 2021-22.
-
-Based on several reports, including our own, we know by 2030 Asia will overtake both the US and Europe combined in global power based on GDP, population, military spending and technological investment. Asia is the world’s largest regional economy and, as its economies integrate further, it has the potential to fuel and shape the next phase of globalization. The era of Westernization over—the Asian Century has arrived.
-
-Technology adoption – Industry 4.0 continues to present opportunities (and challenges)
-
-Since 2016, we have been monitoring progress in advanced manufacturing worldwide along with the World Economic Forum, identifying the essential factors that differentiate the front runners – “Lighthouses” – from the majority. According to recent research by my colleague Enno de Boer and Francisco Betti of WEF that was shared in Davos, the Fourth Industrial Revolution (4IR) is gaining momentum, but not broadly enough.
-
-Enno and Francisco suggest that, though many manufacturers are making great strides toward total technological transformation, over 70% of companies in the manufacturing ecosystem are falling far behind. Their 4IR efforts are stuck in what Enno and Francisco call “pilot purgatory,” or “the attempt to implement advanced manufacturing technologies without realizing appealing returns on investment or measurable improvements in operational KPIs.”
-
-We are already seeing major disparities amongst companies: the gaps in productivity, efficiency and growth are stark. To help in closing the gap and help companies navigate this complex space, we launched the Global Lighthouse Network along with WEF. The report linked above expands on the Global Lighthouse Network. It also outlines secrets to scaling fast as well as in-depth perspectives on E2E value-chain Lighthouses and the human-centered future of production.
-
-Corporates – the capital paradox
-
-We also discussed the future of Asian corporations in Davos, particularly the role Asian corporations will on the global stage. We see it happening rapidly: in the last 10 years alone, Asia was the destination for $1 of every $2 in new investment, and Asian companies have increased their share of the G5000 by six percentage points to stand at 43 percent. That’s the largest share of any region in the world. This point was fascinating to many in Davos, and is still striking to me, given that the bar to enter in 2019 required a company to have revenue of $1.3 billion – double the revenue required only 10 years ago. Clearly, there is a new age of affluence and economic development in the region.
-
-In our latest Future of Asia research on Asian corporations, we dive into the landscape further to understand why this shift is taking place. One of our first findings showed us that globally, ROIC (return on invested capital) declined by 3.2 percentage points, from 11.0 to 7.8 percent, between 2005–07 and 2015–17. During the same period, invested capital grew at almost double the rate of revenue growth, boosting capital intensity (calculated as invested capital divided by revenue) from 0.8 to 1.1. What this means is that Asian companies may be scaling rapidly as capital floods in, yet firms have been unable to deploy this capital in a manner that has translated into economic profits. In fact, they have significantly underperformed when turning it into economic profit. Corporate Asia is also underperforming vis-a-vis other regions on average returns. Our research dissects this trend across sectors and regions in detail, but we found this decline largely reflects the cyclical energy and materials sectors, European finance, and Chinese capital allocation to value-destroying sectors.
-
-There’s an opportunity for incremental economic profit to be uncovered in Asia—$430 billion, in fact. To reverse global economic profit destruction, more of the “Troubled 200” (companies with the lowest economic profit that account for one-third of the global destruction of value) need to move up the corporate “power curve.” The “Terrific 200” (companies that have the highest economic profit in the region and account for one-quarter of global economic profit creation in the G5000) need to stay where they are.
-
-Leading in the 21st century
-
-Against this backdrop, what it means to be a leader in the 21st century has changed. How leaders spend their time, the decisions they make (including ‘imperfect’ decisions), and who they spend time with looks very different today. Here are just a few examples to illustrate:
-
-Technology innovation: New innovations, including data, AI, IoT, I4.0, and more (and the pace of change surrounding them) have profound implications for leaders. The opportunity is big: new products, new channels, new consumers, new business models. The competition intensifies as sectors ‘blur’ into each other (with some of the Chinese ecosystems being at the forefront of this). Strategy, portfolio and choices matter even more. But the pace and uncertainty in making those choices has increased. It also means new ways of working in – and with – many more partnerships and alliances than in the past.
-The next phase of globalization: Regionalization, increased geopolitical tensions and potential bifurcation across the globe means rethinking supply chains, localization of production and innovation hubs. Sometimes, this means leaders will need to make hard choices around shifting geographic priorities.
-Sustainability means real action. The growing attention and demands from society, customers, employees—and a growing number of investors—means real, significant action is required. The days of a company being satisfied by going carbon neutral through offsets alone are over. Today, there is an expectation that a company is actively reducing its carbon footprint, removing single-use plastics, and using its products and services, as far as possible, as part of the solution. This holds true irrespective of sector: from financial services to energy to consumer-facing businesses.
-This is a new world for leaders. We need to learn new skills. We need to learn new ways of gathering trusted information and data. We need to get comfortable with an increase in the pace of decision making: with higher uncertainty when making those decisions, with thinking of optionality yet focus, with continuously renewing our ecosystems of partners. We need to expand and diversify the team of people we listen to and work with. We need to engage even more with our employees—and with society more broadly. And we need to do all this 24/7. Welcome to a new world of leading.
-
-Further thoughts
-
-I will be sharing my thoughts regularly throughout 2020 on topics that matter most to me, like climate change and sustainability, gender diversity and inclusivity. In addition to sharing my own thoughts, though, I’d also love to hear what you’re thinking about. Are there are other topics, markets, global or regional issues, or industries you’d like to hear more on? Please let me know what you’d like to read below in the comments section.
-
-To get all my latest articles, please consider following me on LinkedIn.
-
-Thanks for reading.</p>
+<p>The cloud wins hands down in 100% elastic environments like dev/test. Where you want to build the infrastructure fast, use it for some period and then just destroy. And you can't predict your development cycles much in advance, so you can't efficiently build private infrastructure.
 </body>
 </html>
